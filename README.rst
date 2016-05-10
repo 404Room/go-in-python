@@ -19,15 +19,15 @@ Gopy
 .. code:: python
 
     from gopy import (
-      golang,
-      defer
+        golang,
+        defer
     )
     
     @golang
     def read_file(src):
-      f = open(src, 'r')
-      defer(f.close)
-      # others
+        f = open(src, 'r')
+        defer(f.close)
+        # others
 
 **2. panic和recover**
 
@@ -35,32 +35,32 @@ Gopy
     
     from __future__ import print_function
     from gopy import (
-      golang,
-      defer,
-      panic,
-      recover
+        golang,
+        defer,
+        panic,
+        recover
     )
     
     def error_handler(a, b):
-      error = recover()
-      if error:
-        pass
-      else:
-        pass
-      print(a + b)
+        error = recover()
+        if error:
+            pass
+        else:
+            pass
+        print(a + b)
     
     @golang
     def some_func():
-      defer(error_handler, a, b)
-      # just throw some panic
-      # panic is exception
-      # also, like this
-      # raise RuntimeError
-      panic(RuntimeError)
-      
-      # unreachable code
-      assert 1 == 2
-      defer(print, 'Never print this')
+        defer(error_handler, a, b)
+            # just throw some panic
+            # panic is exception
+            # also, like this
+            # raise RuntimeError
+            panic(RuntimeError)
+          
+            # unreachable code
+            assert 1 == 2
+            defer(print, 'Never print this')
 
 
 说明
