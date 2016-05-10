@@ -52,15 +52,15 @@ Gopy
     @golang
     def some_func():
         defer(error_handler, a, b)
-            # just throw some panic
-            # panic is exception
-            # also, like this
-            # raise RuntimeError
-            panic(RuntimeError)
-          
-            # unreachable code
-            assert 1 == 2
-            defer(print, 'Never print this')
+        # just throw some panic
+        # panic is exception
+        # also, like this
+        # raise RuntimeError
+        panic(RuntimeError)
+      
+        # unreachable code
+        assert 1 == 2
+        defer(print, 'Never print this')
 
 
 说明
