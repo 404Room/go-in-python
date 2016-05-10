@@ -9,7 +9,7 @@ Gopy
 
 ::
   
-    pip  install gopy
+    pip install gopy
     
 使用
 ----
